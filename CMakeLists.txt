@@ -106,4 +106,4 @@ add_boost_test(src/markdown/documentParserTests.cpp DocumentParserTests grammarT
 add_boost_test(src/html/blockGeneratorTests.cpp BlockGeneratorTests grammarTests)
 
 # Old way to run the grammarTests - make testx
-add_custom_target(testx COMMAND grammarTests DEPENDS grammarTests )
+add_custom_target(boosttest COMMAND grammarTests DEPENDS grammarTests )

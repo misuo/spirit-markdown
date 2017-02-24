@@ -46,11 +46,15 @@ To build use `CMake`.
    $ make
    ~~~~
 
-# To run tests
+# Tests
 
-There is about 44 tests included - made using Boost.Test unit tests. Note that I haven't (yet) checked whether theses matches the standard test suites available from respectively John Grubers and/or CommonMark.
+There are - as of this writing - about 44 tests included; all written using [Boost.Test](http://www.boost.org/doc/libs/1_63_0/libs/test/doc/html/index.html) unit tests.
 
-The `CMakeLists.txt` contains actually two ways to run tests. One integrated with `CTest` and one using Alistair's method
+> Note that I haven't (yet) checked whether theses matches the standard test suites available from respectively John Grubers and/or CommonMark and it would certainly be nice to have verified that all these are covered. 
+
+## To run tests
+
+The `CMakeLists.txt` actually contains two ways to run the same unit tests. One integrated with `CTest` and one using Alistair's original method:
 
 1. CTest unit test output
 
@@ -61,7 +65,7 @@ The `CMakeLists.txt` contains actually two ways to run tests. One integrated wit
 2. Boost unit test output
 
      ~~~~
-     $ make testx
+     $ make boosttest
      ~~~~
 
    A successful test run should output:
@@ -72,15 +76,16 @@ The `CMakeLists.txt` contains actually two ways to run tests. One integrated wit
      *** No errors detected
      ~~~~
 
-# To-do
+# To Do
 
 * [ ] Verify/examine that all unit tests are running. Resolve those which fails.
-* [ ] Ensure that unit tests matching the John Grubers standard unit tests are part of unit tests. Missing ones should be added.
-* [ ] Ensure that unit tests matching the CommonMark unit tests are part of unit tests. Missing ones should be added.
+* [ ] Ensure that unit tests matching the John Grubers standard unit tests ([downloaded here](http://daringfireball.net/projects/downloads/MarkdownTest_1.0.zip)) are part of unit tests. Missing ones should be added.
+* [ ] Ensure that unit tests matching the CommonMark unit tests ([found here](https://github.com/michelf/mdtest/)) are part of unit tests. Missing ones should be added.
 * [ ] *... other?*
 
 # Ideas
 
+* [ ] Unit tests from other sources, e.g. https://github.com/karlcow/markdown-testsuite
 * [ ] Add performance measurements to compare with other implementations.
 
 # License
