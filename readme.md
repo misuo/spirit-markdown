@@ -6,14 +6,13 @@ Original source files retrieved from
 
 # Spirit Markdown
 
-Written by Alastair Rankine <alastair@girtby.net>
-Copyright 2010, Alastair Rankine
+Originally written by Alastair Rankine <alastair@girtby.net>, 2010, with the following comments:
 
-## Overview
+> Spirit Markdown is an implementation of a [Markdown][] syntax parser using the [Spirit][] parser library. It is a single pass parser for Markdown, and is written in C++, so it should be extremely fast. It is written to parse the input to an internal document object representation, which allows flexibility in output generation. Also, a complete suite of unit tests are provided, to ensure against functional regressions in the future.
+>
+> Spirit Markdown is currently quite immature and so performance may not yet be comparable with some other Markdown implementations. There are many optimizations to be made, both in the parser rules and in the code itself. For now, the emphasis is on correctness, specifically satisfying the complete requirements of the Markdown language.
 
-Spirit Markdown is an implementation of a [Markdown][] syntax parser using the [Spirit][] parser library. It is a single pass parser for Markdown, and is written in C++, so it should be extremely fast. It is written to parse the input to an internal document object representation, which allows flexibility in output generation. Also, a complete suite of unit tests are provided, to ensure against functional regressions in the future.
-
-Spirit Markdown is currently quite immature and so performance may not yet be comparable with some other Markdown implementations. There are many optimizations to be made, both in the parser rules and in the code itself. For now, the emphasis is on correctness, specifically satisfying the complete requirements of the Markdown language.
+The intention with this fork is to bring it up to level with other CommonMark parsers/generators. Additionally it might be worth to explore adding extensions, e.g. such as tables. 
 
 ## How to build
 
@@ -80,6 +79,9 @@ The `CMakeLists.txt` contains actually two ways to run tests. One integrated wit
 * [ ] Ensure that unit tests matching the CommonMark unit tests are part of unit tests. Missing ones should be added.
 * [ ] *... other?*
 
+# Ideas
+
+* [ ] Add performance measurements to compare with other implementations.
 
 # License
 
